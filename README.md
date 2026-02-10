@@ -220,6 +220,53 @@ cd frontend
 npm run build
 ```
 
+---
+
+## 10. Docker - Execução com Containers
+
+### Pré-requisitos
+- Docker instalado ([Download Docker](https://www.docker.com/))
+- Docker Compose (incluído com Docker Desktop)
+
+### Iniciando com Docker
+
+```bash
+# Na raiz do projeto
+docker-compose up --build
+```
+
+A aplicação estará disponível em:
+- **Frontend:** http://localhost:3000
+- **Backend API:** http://localhost:8000
+- **Admin Django:** http://localhost:8000/admin
+
+### Comandos Úteis
+
+```bash
+# Parar os containers
+docker-compose down
+
+# Ver logs
+docker-compose logs -f
+
+# Executar migrate manualmente
+docker-compose exec backend python manage.py migrate
+
+# Criar superuser
+docker-compose exec backend python manage.py createsuperuser
+
+# Acessar shell do container backend
+docker-compose exec backend bash
+```
+
+### Estrutura Docker
+
+- **backend:** Django REST API
+- **frontend:** React com Vite
+- **Network:** clinica_network (comunicação entre containers)
+
+---
+
 ## 11. Funcionalidades Implementadas
 
 ### ✅ Autenticação
@@ -275,6 +322,6 @@ npm run build
 
 ---
 
-## 12. Identificação dos Autores
+## 13. Identificação dos Autores
 
 • Francisco de Asis vieira

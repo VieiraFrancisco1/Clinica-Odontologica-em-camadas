@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+dist
+build
+__pycache__
+*.pyc
+.env
+.git
+.gitignore
+.DS_Store
+.venv
+venv
+db.sqlite3
